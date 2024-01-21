@@ -1,12 +1,15 @@
+import { unstable_noStore } from 'next/cache';
 import Image from 'next/image'
 
 // https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1705378299002.pdf?updatedAt=1705378299000
 const KLAY_TO_FNSA_RATIO = 148.079656;
 
 async function fetchKrwByTicker(ticker: string) {
+  unstable_noStore();
   const res = await fetch(`https://api.bithumb.com/public/ticker/${ticker}_KRW`);
   const parsedJson = await res.json();
   const krw: string = parsedJson['data']['closing_price'];
+  console.log("fetchKrwByTicker", ticker, krw);
   return krw;
 }
 
