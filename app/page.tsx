@@ -1,5 +1,5 @@
 import { unstable_noStore } from 'next/cache';
-import Image from 'next/image'
+import Image from 'next/image';
 
 // https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1705378299002.pdf?updatedAt=1705378299000
 const KLAY_TO_FNSA_RATIO = 148.079656;
@@ -69,7 +69,7 @@ export default async function Home() {
 
       <div className="flex-col h-48 items-end justify-center lg:h-auto mt-16">
         <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
-          <a href="https://zdnet.co.kr/view/?no=20240120014906">2024-01-20 | 클레이튼-핀시아 "통합 코인 PDT...교환 비율 개정안 마련할 것 | ZDNET Korea"</a>
+          <a href="https://zdnet.co.kr/view/?no=20240120014906">2024-01-20 | 클레이튼-핀시아 &quot;통합 코인 PDT...교환 비율 개정안 마련할 것&quot; | ZDNET Korea</a>
         </div>
         <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
           <a href="https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1705378299002.pdf">2024-01-16 | 공식 토큰 교환비는 <b>1KLAY(PDT) : {KLAY_TO_FNSA_RATIO}(FNSA)</b> 입니다</a>
