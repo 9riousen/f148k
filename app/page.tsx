@@ -72,6 +72,9 @@ export default async function Home() {
 
       <div className="flex-col h-48 items-end justify-center lg:h-auto mt-16">
         <div className="relative rounded-md px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
+          <a href="https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1706181791456.pdf">2024-01-25 | 개정안의 온체인 기여자 보상으로 FNSA 스테이킹 하면 <b>1:168</b>입니다</a>
+        </div>
+        <div className="relative rounded-md px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
           <a href="https://zdnet.co.kr/view/?no=20240120014906">2024-01-20 | 클레이튼-핀시아 &quot;통합 코인 PDT...교환 비율 개정안 마련할 것&quot; | ZDNET Korea</a>
         </div>
         <div className="relative rounded-md px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
@@ -79,7 +82,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className='w-full px-10'>
+      <div className='w-full px-0 lg:px-4 mt-24'>
         <DiscussionEmbed
           shortname='klayfnsa'
           config={
