@@ -1,5 +1,8 @@
+'use client'
+
 import { unstable_noStore } from 'next/cache';
 import Image from 'next/image';
+import { DiscussionEmbed } from 'disqus-react';
 
 // https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1705378299002.pdf?updatedAt=1705378299000
 const KLAY_TO_FNSA_RATIO = 148.079656;
@@ -50,22 +53,22 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-col content-center p-1 text-gray-600">
-          <a
-            className="flex gap-2"
-            href="https://bithumb.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            시세정보{' '}
-            <Image
-              src="/bithumb.png"
-              alt="Bithumb"
-              className="dark:invert"
-              width={100}
-              height={24}
-            />
-          </a>
-        </div>
+        <a
+          className="flex gap-2"
+          href="https://bithumb.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          시세정보{' '}
+          <Image
+            src="/bithumb.png"
+            alt="Bithumb"
+            className="dark:invert"
+            width={100}
+            height={24}
+          />
+        </a>
+      </div>
 
       <div className="flex-col h-48 items-end justify-center lg:h-auto mt-16">
         <div className="relative rounded-md px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
@@ -74,6 +77,20 @@ export default async function Home() {
         <div className="relative rounded-md px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 mb-5">
           <a href="https://vos.line-scdn.net/landpress-content-v2-ogautzqf79ax91l8h8icywfr/1705378299002.pdf">2024-01-16 | 공식 토큰 교환비는 <b>1KLAY(PDT) : {KLAY_TO_FNSA_RATIO}(FNSA)</b> 입니다</a>
         </div>
+      </div>
+
+      <div className='w-full px-10'>
+        <DiscussionEmbed
+          shortname='klayfnsa'
+          config={
+            {
+              url: 'https://klayfnsa.vercel.app',
+              identifier: 'main',
+              title: 'KLAY:FNSA 교환비',
+              language: 'ko',
+            }
+          }
+        />
       </div>
     </main>
   )
